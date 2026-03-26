@@ -63,6 +63,7 @@ test("login test",async({page})=>{
     }
 
 }
-  const orderIdDetails = await page.locator(".col-text").textContent();
+//await page.locator("tr[class='ng-star-inserted'] th").waitFor()
+  const orderIdDetails = await page.locator("tr[class='ng-star-inserted'] th").first().textContent();
    expect(orderid.includes(orderIdDetails)).toBeTruthy();
 });
